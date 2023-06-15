@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+  background-color: #000000;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+}
+
+.menu {
+  width: 67px;
+  height: 300px;
+  background-color: #3C79F5;
+  border-radius: 35px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menu.active {
+  width: 225px;
+}
+
+.toggle {
+  position: absolute;
+  top: -13px;
+  right: -7px;
+  height: 30px;
+  width: 30px;
+  border-radius: 60%;
+  z-index: 1;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.toggle i{
+  transform: rotate(45deg) translate(0px, 0px);
+  color: #000000;
+}
+.toggle i:hover{
+  color: #3C79F5;
+}
+.menu.active .toggle i {
+  transform: rotate(225deg) translate(0px,0px);
+}
+ul {
+  position: relative;
+  width: 100%;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  height: 75px;
+  width: 100%;
+  padding-left: 23px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+li:hover {
+  background: transparent;
+  color: #f0f0f0;
+}
+
+span {
+  margin-left: 20px;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+.menu.active span {
+  visibility: visible;
+  opacity: 1;
+} 
+
+.A,
+.B {
+text-align: center;
+transition: 0.5s ease;
+width: 10px;
+}
